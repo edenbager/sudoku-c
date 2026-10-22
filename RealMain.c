@@ -117,9 +117,9 @@ void swap(PlayersListNode** array, int i, int j) {
 	PlayersListNode* temp;
 
 	// Swap pointers if out of order
-	temp = array[j];
-	array[j] = array[j + 1];
-	array[j + 1] = temp;
+	temp = array[i];
+	array[i] = array[j];
+	array[j] = temp;
 }
 
 int findLogSize(int x) {
