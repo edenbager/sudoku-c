@@ -71,7 +71,6 @@ void fixConflicts(short grid[GRID_SIZE][GRID_SIZE], int row, int col, int n1) {
 		if (grid[i][col] == n1 && i != row) { // Conflict in the same column
 			grid[i][col] = findValidReplacement(grid, i, col); // Replace with valid number
 		}
-		printf("check row and column\n");
 	}
 
 	// Check the 3x3 sub-grid for conflicts

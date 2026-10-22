@@ -21,7 +21,7 @@ PlayersTreeNode* BuildTreeFromArrayRec(PlayersListNode** arr, int start, int end
 	int mid = (start + end) / 2;
 
 	//Check if the current node is -1 and ignore it if so
-	if (arr[mid] == -1)
+	if (arr[mid] == NULL)
 		return NULL;
 
 	//Get the left node by decreasing the end index of the array to be a node smaller than the curr mid, so the new mid will be exactly half of the left side

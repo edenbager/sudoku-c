@@ -1,6 +1,6 @@
 #include "Header.h"
 
-void main() {
+int main(void) {
 
 	srand(12345);  // Seed for random number generator
 
@@ -79,7 +79,7 @@ void main() {
 	f = fopen("output.txt", "w");
 	if (f == NULL){
 		printf("Failed opening the file. Exiting!\n");
-		return;
+		return 1;
 	}
 	while (currWinner != NULL) {
 		fprintf(f, "Player Name: %s\n", currWinner->player.name);
@@ -93,6 +93,7 @@ void main() {
 	freeList(activePlayersList);
 	freeList(winnersList);
 	free(playersArray);
+	return 0;
 }
 
 void bubbleSortPlayers(PlayersListNode** array, int size) {
